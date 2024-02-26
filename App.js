@@ -1,20 +1,64 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, SafeAreaView, StyleSheet, Button, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// You can import supported modules from npm
+import { Card } from 'react-native-paper';
+
+// or any files within the Snack
+import HalamanSplash from './page/splash_screen';
+import HalamanOnboarding1 from './page/onboarding1';
+import HalamanOnboarding2 from './page/onboarding2';
+import HalamanWelcome from './page/welcome';
+import HalamanLogin from './page/login';
+import HalamanRegister from './page/register';
+import HalamanForgotPassword from './page/forgotpassword';
+import Halamanotpverifikasi from './page/otpverifikasi';
+import Halamanewpassword from './page/newpassword';
+import Halamanpasswordchanged from './page/passwordchanged';
+// import HalamanRegister from './page/splash_screen';
+// import HalamanPorto from './components/portofolio_screen';
+// import HalamanHome from './components/home_screen';
+// import HalamanInput from './components/input_screen';
+
+
+
+const Stack = createNativeStackNavigator();
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+     <Stack.Navigator>
+<Stack.Screen name="Splash_Screen" component={HalamanSplash} options={{ headerShown: false }} />
+      <Stack.Screen name="Onboarding1" component={HalamanOnboarding1 } options={{ headerShown: false }}/>
+      <Stack.Screen name="Onboarding2" component={HalamanOnboarding2 } options={{ headerShown: false }}/>
+      <Stack.Screen name="welcome" component={HalamanWelcome } options={{ headerShown: false }}/>
+      <Stack.Screen name="login" component={HalamanLogin } options={{ headerShown: false }}/>
+      <Stack.Screen name="register" component={HalamanRegister } options={{ headerShown: false }}/>
+      <Stack.Screen name="forgotpassword" component={HalamanForgotPassword } options={{ headerShown: false }}/>
+      <Stack.Screen name="otpverifikasi" component={Halamanotpverifikasi } options={{ headerShown: false }}/>
+      <Stack.Screen name="newpassword" component={Halamanewpassword} options={{ headerShown: false }}/>
+      <Stack.Screen name="passwordchanged" component={Halamanpasswordchanged} options={{ headerShown: false }}/>
+
+     </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#ecf0f1',
+
+  },
+  paragraph: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
+
+
