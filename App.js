@@ -16,6 +16,7 @@ import HalamanForgotPassword from './page/forgotpassword';
 import Halamanotpverifikasi from './page/otpverifikasi';
 import Halamanewpassword from './page/newpassword';
 import Halamanpasswordchanged from './page/passwordchanged';
+import Halamanhome from './page/home';
 // import HalamanRegister from './page/splash_screen';
 // import HalamanPorto from './components/portofolio_screen';
 // import HalamanHome from './components/home_screen';
@@ -40,6 +41,7 @@ export default function App() {
       <Stack.Screen name="otpverifikasi" component={Halamanotpverifikasi } options={{ headerShown: false }}/>
       <Stack.Screen name="newpassword" component={Halamanewpassword} options={{ headerShown: false }}/>
       <Stack.Screen name="passwordchanged" component={Halamanpasswordchanged} options={{ headerShown: false }}/>
+      <Stack.Screen name="home" component={Halamanhome} options={{ headerShown: false }}/>
 
      </Stack.Navigator>
     </NavigationContainer>

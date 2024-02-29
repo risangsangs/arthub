@@ -40,7 +40,7 @@ export default function App({ navigation }) {
          <Text style={styles.text1} onPress={() => navigation.navigate('forgotpassword')}>
          Forgot Password?
       </Text>
-      <Button width={339} height={56} placeholder="Next" backgroundColor="#786AD0" textColor="white" marginTop={27} onPress={() => navigation.navigate('Onboarding2')} />
+      <Button width={339} height={56} placeholder="login" backgroundColor="#786AD0" textColor="white" marginTop={27} onPress={() => navigation.navigate('home')} />
       <View style={styles.orLoginWithContainer}>
         <View style={styles.line}></View>
          <Text style={styles.orLoginWithText}>Or Login with</Text>
@@ -81,7 +81,7 @@ export default function App({ navigation }) {
       </View>
       <View style={styles.registerContainer}>
         <Text style={styles.registerText}>Don’t have an account? </Text>
-         <Text style={[styles.registerText, styles.registerLink]} onPress={() => navigation.navigate('Registration')}>
+         <Text style={[styles.registerText, styles.registerLink]} onPress={() => navigation.navigate('register')}>
           Register Now
         </Text>
       </View>
@@ -99,6 +99,9 @@ const styles = StyleSheet.create({
     right: 150,
     borderColor: "#E8ECF4",
     borderWidth: 2,
+  },
+  buttontextinput1: {
+    borderRadius: 10
   },
   
   textHeader: {

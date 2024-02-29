@@ -57,7 +57,7 @@ export default function App({ navigation }) {
            style={styles.buttontextinput1}
           />
         </View>
-      <Button width={339} height={56} placeholder="Next" backgroundColor="#786AD0" textColor="white" marginTop={27} onPress={() => navigation.navigate('Onboarding2')} />
+      <Button width={339} height={56} placeholder="Next" backgroundColor="#786AD0" textColor="white" marginTop={27} onPress={() => navigation.navigate('forgotpassword')} />
       <View style={styles.orLoginWithContainer}>
         <View style={styles.line}></View>
          <Text style={styles.orLoginWithText}>Or Login with</Text>
@@ -98,7 +98,7 @@ export default function App({ navigation }) {
       </View>
       <View style={styles.registerContainer}>
         <Text style={styles.registerText}>Already have an account? </Text>
-         <Text style={[styles.registerText, styles.registerLink]} onPress={() => navigation.navigate('Registration')}>
+         <Text style={[styles.registerText, styles.registerLink]} onPress={() => navigation.navigate('login')}>
           Login Now
         </Text>
       </View>
@@ -117,7 +117,9 @@ const styles = StyleSheet.create({
     borderColor: "#E8ECF4",
     borderWidth: 2,
   },
-  
+  buttontextinput1: {
+    borderRadius: 10
+  },
   textHeader: {
     fontSize: 26,
     color: "#1E232C",

@@ -13,7 +13,7 @@ const App = ( { navigation } ) => (
       <Text style={styles.header1}>Password Changed!</Text>
       <Text style={styles.header2}>Your password has been </Text>
       <Text style={styles.header3}>Password Changed!</Text>
-      <Button width={339} height={56} placeholder="Back to Login" backgroundColor="#786AD0" textColor="white" marginTop={50} onPress={() => navigation.navigate('Onboarding2')} />
+      <Button width={339} height={56} placeholder="Back to Login" backgroundColor="#786AD0" textColor="white" marginTop={50} onPress={() => navigation.navigate('login')} />
   </View>
 );
 
