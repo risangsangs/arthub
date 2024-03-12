@@ -16,15 +16,15 @@ const MyFlatList = () => {
       {/* Konten sebelah kanan */}
       <View style={{ flex: 1, justifyContent: 'space-between' }}>
         {/* Button dan teks di sebelah kanan atas */}
-        <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 5 }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 5 }}>
           <TouchableOpacity onPress={item.onButtonPress}>
             <View style={{ width: 50, height: 30, backgroundColor: '#F1F1F1', justifyContent: 'center', alignItems: 'center', borderRadius: 6 }}>
               <Text style={{ color: '#2C2C2C' }}>{item.buttonText}</Text>
             </View>
           </TouchableOpacity>
-          <Text style={{ marginLeft: 70, fontSize: 10,}}>{item.textdate}</Text>
-          <View style={{ width:3, height: 3, borderRadius:30, borderWidth: 1, borderColor: '#828282', backgroundColor : '#828282', marginLeft: 5}}>{item.textdate1}</View>
-          <Text style={{fontSize: 10, marginLeft: 3}}>{item.textdate2}</Text>
+          <Text style={{ fontSize: 10,}}>{item.textdate}</Text>
+          <View style={{ width:3, height: 3, borderRadius:30, borderWidth: 1, borderColor: '#828282', backgroundColor : '#828282',}}>{item.textdate1}</View>
+          <Text style={{fontSize: 10,}}>{item.textdate2}</Text>
         </View>
 
         {/* Teks di sebelah kanan bawah */}

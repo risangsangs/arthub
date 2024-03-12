@@ -57,7 +57,7 @@ export default function App({ navigation }) {
            style={styles.buttontextinput1}
           />
         </View>
-      <Button width={339} height={56} placeholder="Next" backgroundColor="#786AD0" textColor="white" marginTop={27} onPress={() => navigation.navigate('forgotpassword')} />
+      <Button width={339} height={56} placeholder="Register" backgroundColor="#786AD0" textColor="white" marginTop={27} onPress={() => navigation.navigate('login')} />
       <View style={styles.orLoginWithContainer}>
         <View style={styles.line}></View>
          <Text style={styles.orLoginWithText}>Or Login with</Text>
@@ -110,6 +110,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+    backgroundColor: '#FFFFFF'
   },
 
   buttonback: {

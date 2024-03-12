@@ -1,14 +1,16 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, View, Image } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import Button from '../component/button';
 import ImageProfil from '../assets/chirsty.jpg';
 import Search from '../assets/search.png';
 import  CustomTextInput from '../component/text_input.js';
 import CustomFlatList from '../component/flatlist.js';
 import CustomFlatList2 from '../component/flatlist2.js';
+import Navbar from '../component/navbar.js';
 
 const App = ({ navigation }) => (
   <View style={styles.container}>
+    <ScrollView>
     <View style={styles.header}>
       <View style={styles.text}>
         <Text style={styles.welcomeText}>Selamat Datang</Text>
@@ -49,21 +51,21 @@ const App = ({ navigation }) => (
         width={95}
         height={34}
         placeholder="Teater"
-        backgroundColor="white"
+        backgroundColor="#F1F1F1"
         textColor="#8F8F8F"
       />
       <Button
         width={95}
         height={34}
         placeholder="Musik"
-        backgroundColor="white"
+        backgroundColor="#F1F1F1"
         textColor="#8F8F8F"
       />
       <Button
         width={95}
         height={34}
         placeholder="Seni Rupa"
-        backgroundColor="white"
+        backgroundColor="#F1F1F1"
         textColor="#8F8F8F"
       />
     </View>
@@ -72,12 +74,15 @@ const App = ({ navigation }) => (
         <Text style={styles.LihatSemua}>Lihat Semua</Text>
     </View>
     <CustomFlatList2 />
+    </ScrollView>
+    <Navbar />
   </View>
 );
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#FFFFFF'
   },
   header: { 
     marginHorizontal: 25,
@@ -106,9 +111,10 @@ const styles = StyleSheet.create({
   },
   textinput: {
     left: 17,
-    borderWidth: 4,
+    borderWidth: 1,
     borderColor: '#F1F1F1',
     borderRadius: 100,
+    textAlign: 'center',
   },
   search: {
     position: 'absolute',
@@ -120,7 +126,7 @@ const styles = StyleSheet.create({
   },
   header2: { 
     marginHorizontal: 10,
-    marginTop: 12,
+    marginTop: 10,
     flexDirection: 'row',
     gap: 135
   },
@@ -130,26 +136,25 @@ const styles = StyleSheet.create({
   },
   LihatSemua: {
     fontSize: 14,
-    color: '#786AD0'
+    color: '#786AD0',
+    top: 5,
   },
   buttonContainer: {
     flexDirection: 'row',
     marginHorizontal: 15,
+    bottom: 40,
+    marginTop: 30,
     gap: 10
   },
   header3: { 
     marginHorizontal: 10,
-    bottom: 85,
+    bottom: 20,
     flexDirection: 'row',
     gap: 149
   },
   Rekomendasi: {
     fontSize: 20,
     fontWeight: 'bold'
-  },
-  LihatSemua: {
-    fontSize: 14,
-    color: '#786AD0'
   },
 });
 

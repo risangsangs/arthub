@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ecf0f1',
-
   },
   paragraph: {
     margin: 24,
