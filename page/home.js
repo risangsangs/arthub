@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import { ImageBackground, StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import Button from '../component/button';
 import ImageProfil from '../assets/chirsty.jpg';
@@ -8,7 +8,9 @@ import CustomFlatList from '../component/flatlist.js';
 import CustomFlatList2 from '../component/flatlist2.js';
 import Navbar from '../component/navbar.js';
 
-const App = ({ navigation }) => (
+export default function App ({ navigation }) {
+  const [inputText, setInputText] = useState('');
+  return (
   <View style={styles.container}>
     <ScrollView>
     <View style={styles.header}>
@@ -38,37 +40,40 @@ const App = ({ navigation }) => (
     </View>
 
     <CustomFlatList />
-    <View style={styles.buttonContainer}>
-      <Button
-        width={95}
-        height={34}
-        placeholder="Semua"
-        backgroundColor="#786AD0"
-        textColor="#FFFFFF"
-        style={styles.buttonicon}
-      />
-      <Button
-        width={95}
-        height={34}
-        placeholder="Teater"
-        backgroundColor="#F1F1F1"
-        textColor="#8F8F8F"
-      />
-      <Button
-        width={95}
-        height={34}
-        placeholder="Musik"
-        backgroundColor="#F1F1F1"
-        textColor="#8F8F8F"
-      />
-      <Button
-        width={95}
-        height={34}
-        placeholder="Seni Rupa"
-        backgroundColor="#F1F1F1"
-        textColor="#8F8F8F"
-      />
-    </View>
+<ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.buttonContainer}>
+  <Button
+    width={95}
+    height={34}
+    placeholder="Semua"
+    backgroundColor="#786AD0"
+    textColor="#FFFFFF"
+    style={[styles.buttonicon, { marginRight: 10 }]}
+  />
+  <Button
+    width={95}
+    height={34}
+    placeholder="Teater"
+    backgroundColor="#F1F1F1"
+    textColor="#8F8F8F"
+    style={[styles.buttonicon, { marginRight: 10 }]}
+  />
+  <Button
+    width={95}
+    height={34}
+    placeholder="Musik"
+    backgroundColor="#F1F1F1"
+    textColor="#8F8F8F"
+    style={[styles.buttonicon, { marginRight: 10 }]}
+  />
+  <Button
+    width={95}
+    height={34}
+    placeholder="Seni Rupa"
+    backgroundColor="#F1F1F1"
+    textColor="#8F8F8F"
+    style={[styles.buttonicon, { marginRight: 10 }]}
+  />
+</ScrollView>
     <View style={styles.header3}>
         <Text style={styles.TrendingEvent}>Rekomendasi</Text>
         <Text style={styles.LihatSemua}>Lihat Semua</Text>
@@ -78,6 +83,8 @@ const App = ({ navigation }) => (
     <Navbar />
   </View>
 );
+}
+
 
 const styles = StyleSheet.create({
   container: {
@@ -128,7 +135,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginTop: 10,
     flexDirection: 'row',
-    gap: 135
+    gap: 149
   },
   TrendingEvent: {
     fontSize: 20,
@@ -158,4 +165,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+

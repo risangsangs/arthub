@@ -17,6 +17,10 @@ import Halamanotpverifikasi from './page/otpverifikasi';
 import Halamanewpassword from './page/newpassword';
 import Halamanpasswordchanged from './page/passwordchanged';
 import Halamanhome from './page/home';
+import Halamanticketupcoming from './page/ticket_upcoming';
+import Halamanticketonsale from './page/ticket_onsale';
+import Halamanticketpast from './page/ticket_past';
+import Halamanprofile from './page/profile';
 // import HalamanRegister from './page/splash_screen';
 // import HalamanPorto from './components/portofolio_screen';
 // import HalamanHome from './components/home_screen';
@@ -42,6 +46,10 @@ export default function App() {
       <Stack.Screen name="newpassword" component={Halamanewpassword} options={{ headerShown: false }}/>
       <Stack.Screen name="passwordchanged" component={Halamanpasswordchanged} options={{ headerShown: false }}/>
       <Stack.Screen name="home" component={Halamanhome} options={{ headerShown: false }}/>
+      <Stack.Screen name="ticketupcoming" component={Halamanticketupcoming} options={{ headerShown: false }}/>
+      <Stack.Screen name="ticketonsale" component={Halamanticketonsale} options={{ headerShown: false }}/>
+      <Stack.Screen name="ticketpast" component={Halamanticketpast} options={{ headerShown: false }}/>
+      <Stack.Screen name="profile" component={Halamanprofile} options={{ headerShown: false }}/>
 
      </Stack.Navigator>
     </NavigationContainer>

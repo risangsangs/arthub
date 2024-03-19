@@ -19,13 +19,13 @@ const Nav = () => {
     };
 
     const GoSetting = () => {
-        navigation.navigate('login');
-        setActiveMenu('login');
+        navigation.navigate('profile');
+        setActiveMenu('profile');
     };
 
     const GoTicket = () => {
-        navigation.navigate('register');
-        setActiveMenu('register');
+        navigation.navigate('ticketupcoming');
+        setActiveMenu('ticketupcoming');
     };
     const GoBookmark = () => {
         navigation.navigate('forgotpassword');
@@ -49,16 +49,16 @@ const Nav = () => {
                     <Text style={[styles.label, activeMenu === 'home' && styles.activeLabel]}>Home</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={GoTicket} style={styles.navItem}>
-                    <Image style={[styles.icon, activeMenu === 'register' && styles.activeIcon]} source={Ticket} />
-                    <Text style={[styles.label, activeMenu === 'register' && styles.activeLabel]}>Ticket</Text>
+                    <Image style={[styles.icon, activeMenu === 'ticketupcoming' && styles.activeIcon]} source={Ticket} />
+                    <Text style={[styles.label, activeMenu === 'ticketupcoming' && styles.activeLabel]}>Ticket</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={GoBookmark} style={styles.navItem}>
                     <Image style={[styles.icon, activeMenu === 'forgotpassword' && styles.activeIcon]} source={Bookmark} />
                     <Text style={[styles.label, activeMenu === 'forgotpassword' && styles.activeLabel]}>Bookmark</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={GoSetting} style={styles.navItem}>
-                    <Image style={[styles.icon, activeMenu === 'login' && styles.activeIcon]} source={Setting} />
-                    <Text style={[styles.label, activeMenu === 'login' && styles.activeLabel]}>Setting</Text>
+                    <Image style={[styles.icon, activeMenu === 'profile' && styles.activeIcon]} source={Setting} />
+                    <Text style={[styles.label, activeMenu === 'profile' && styles.activeLabel]}>Setting</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -99,14 +99,14 @@ const styles = StyleSheet.create({
         height: 24,
     },
     activeIcon: {
-        tintColor: 'blue',
+        tintColor: '#7545F6',
     },
     label: {
         fontSize: 10,
         color: '#92959B',
     },
     activeLabel: {
-        color: '#2254C5',
+        color: '#7545F6',
     },
 });
 

@@ -26,7 +26,7 @@ const CustomFlatList = () => {
   ];
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={{ marginLeft: 13, marginTop: 10 }}>
+    <View style={{ marginLeft: 13, marginTop: 10 }}>
       <View style={{height: 290}}>
       <View style={{ position: 'relative' }}>
           <Image source={item.imageSource} style={{ width: 289, height: 178 }} />
@@ -38,7 +38,8 @@ const CustomFlatList = () => {
           <Icon name="bookmark" size={20} color="#FFFFFF"  />
           </View>
           </TouchableOpacity>
-        </View>
+      </View>
+      <TouchableOpacity>
       <Text style={{ fontSize: 18, marginTop: 5, maxWidth: 289 }}>{item.mainText}</Text>
       <View style={{ flexDirection: 'row', alignItems: 'center' }}>
         <Image source={item.imageSourceProfil} style={{ width: 20, height: 20, borderRadius: 5, marginRight: 5, marginTop: 10 }} />
@@ -47,8 +48,9 @@ const CustomFlatList = () => {
         <View style={{width:3, height: 3, borderRadius:30, borderWidth: 1, borderColor: '#828282', backgroundColor : '#828282',width:3, height: 3, borderRadius:30, borderWidth: 1, borderColor: '#828282', backgroundColor : '#828282', top: 6, marginLeft: 5}}></View>
         <Text style={{ fontSize: 10, marginTop: 11, marginLeft: 3 }}>{item.rightText2}</Text>
       </View>
+      </TouchableOpacity>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 
   return (
