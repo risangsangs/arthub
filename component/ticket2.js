@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Image, Text, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
 import Line from '../assets/line.png';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const data = [
   {
@@ -43,17 +44,25 @@ const data = [
 
 const Card = ({ item }) => {
   return (
-    <TouchableOpacity style={styles.cardContainer}>
-      <View style={styles.circleTop} />
-      <Image source={ item.imageSource } style={styles.image} />
-      <Image style={styles.search}source={Line}/>
-      <View style={styles.textContainer}>
-      <Text style={styles.titleText} numberOfLines={2} ellipsizeMode="tail">{item.title}</Text>
-        <Text style={styles.timeText}>{item.time}</Text>
-        <Text style={styles.ticketsText}>{item.tickets}</Text>
+    <View style={styles.container}>
+      <View style={{...styles.cutEdge, top: -6}} />
+      <View style={{...styles.cutEdge, bottom: -6}} />
+      <View style={styles.itemContainer}>
+        <Image source={ item.imageSource } style={styles.image} />
+       <View style={styles.separator} />
+       <View style={styles.content}>
+        <Text style={{fontSize: 16, fontWeight: '600', color: '#131313'}} numberOfLines={2} ellipsizeMode="tail">{item.title}</Text>
+        <View style={styles.itemContent}>
+          <Icon name="clock-o" size={16} style={styles.iconContent} />
+          <Text style={{flex:1}}>{item.time}</Text>
+        </View>
+        <View style={styles.itemContent}>
+          <Icon name="ticket" size={16} color="#2196f3" style={styles.iconContent} />
+         <Text style={{color: '#2196f3'}}>See Ticket {item.tickets}</Text>
+        </View>
+        </View>
       </View>
-      <View style={styles.circleBottom} />
-    </TouchableOpacity>
+    </View>
   );
 };
 
@@ -69,82 +78,57 @@ const FlatListWithCard = () => {
 };
 
 const styles = StyleSheet.create({
-  cardContainer: {
-    width: 331,
-    height: 128,
+  container: {
     flexDirection: 'row',
-    backgroundColor: '#FFFFFF',
-    borderRadius: 15,
-    shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 10,
-    elevation: 5,
-    marginBottom: 16,
+    marginTop: 16,
+    overflow: 'hidden',
+    marginHorizontal: 20,
+  },
+  itemContainer: {
+    flex: 1,
+    flexDirection: 'row',
     alignItems: 'center',
-    marginHorizontal: 30,
+    padding: 8,
+    borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#D0D5DD', 
+    borderColor: '#D0D5DD',
+    backgroundColor: '#fff',
   },
   image: {
     width: 120,
     height: 120,
-    borderRadius: 10,
-    marginRight: 19,
-    left: 3,
+    borderRadius: 4,
   },
-  circleTop: {
-    width: 10, // Adjust size as needed
-    height: 10,
-    borderRadius: 10,
-    backgroundColor: '#fff', // Match your card background color
+  content : {
+    flex: 1,
+  },
+  itemContent : {
+    flexDirection: 'row',
+    marginTop: 4,
+  },
+  iconContent: { 
+    marginRight: 8,
+    marginTop: 2,
+  },
+  separator: {
+    borderLeftWidth: 1,
+    borderStyle: 'dashed',
+    borderColor: '#DOD5DD',
+    height: '90%',
+    marginHorizontal: 12,
+  },
+  cutEdge: {
+    position : 'absolute',
+    left: 135,
+    zIndex: 99,
+    height: 11,
+    width: 11,
+    borderRadius: 1000,
     borderWidth: 1,
-    borderColor: '#D0D5DD', 
-    position: 'absolute',
-    top: -5, // Adjust position
-    left: '36%', // Center horizontally
+    borderColor: '#D05DD',
+    backgroundColor: '#FAFAFA'
   },
-  circleBottom: {
-    width: 10, // Adjust size as needed
-    height: 5,
-    borderTopLeftRadius: 10, // Set bottom-left and bottom-right radius for half-circle
-    borderTopRightRadius: 10,
-    backgroundColor: '#fff', // Match your card background color
-    borderTopWidth: 1,
-    borderLeftWidth : 1,
-borderRightWidth : 1,
-    borderColor: '#D0D5DD',
-    position: 'absolute',
-    bottom: 0, // Adjust position to overlap border
-    left: '36%', // Center horizontally
-    
-  },
-  search: {
-      position: 'absolute',
-      top: 50,
-      right: 187,
-      width: 20,
-      height: 2,
-      zIndex: 1,
-      transform : [{ rotate: '90deg' }]
-  },
-  textContainer: {
-    
-  },
-  titleText: {
-    fontSize: 16,
-    maxWidth: 190,
-    fontWeight: 'bold',
-    marginBottom: 15
-  },
-  timeText: {
-    fontSize: 14,
-    marginBottom: 15
-  },
-  ticketsText: {
-    fontSize: 14,
-    color: '#888888',
-  },
+  
 });
 
 export default FlatListWithCard;

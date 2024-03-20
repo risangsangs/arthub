@@ -38,11 +38,11 @@ const Tic = () => {
                 <TouchableOpacity onPress={GOticketupcoming} style={styles.navItem}>
                     <Text style={[styles.label, activeMenu === 'ticketupcoming' && styles.activeLabel]}>Upcoming</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={Goticketpast} style={styles.navItem}>
-                    <Text style={[styles.label, activeMenu === 'ticketpast' && styles.activeLabel]}>On Sale</Text>
-                </TouchableOpacity>
                 <TouchableOpacity onPress={Goticketonsale} style={styles.navItem}>
                     <Text style={[styles.label, activeMenu === 'ticketonsale' && styles.activeLabel]}>Past</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={Goticketpast} style={styles.navItem}>
+                    <Text style={[styles.label, activeMenu === 'ticketpast' && styles.activeLabel]}>On Sale</Text>
                 </TouchableOpacity>
             </View>
         </View>

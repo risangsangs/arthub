@@ -3,9 +3,9 @@ import { View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 
 const MyFlatList = () => {
     const data = [
-        { id: 1, imageSource: require('../assets/event1.png'), buttonText: 'semua', textdate: '27 Juni 2024', textdate2: 'Rp 90.000', bottomText: 'Coldplay : Music Of the Spheres 2024', onButtonPress: () => {} },
-        { id: 2, imageSource: require('../assets/event1.png'), buttonText: 'semua', textdate: '27 Juni 2024', textdate2: 'Rp 90.000', bottomText: 'Teks 2', onButtonPress: () => {} },
-        { id: 3, imageSource: require('../assets/event1.png'), buttonText: 'semua', textdate: '27 Juni 2024', textdate2: 'Rp 90.000', bottomText: 'Teks 2', onButtonPress: () => {} },
+        { id: 1, imageSource: require('../assets/event1.png'), category: 'semua', textdate: '27 Juni 2024', textdate2: 'Rp 90.000', bottomText: 'Coldplay : Music Of the Spheres 2024', onButtonPress: () => {} },
+        { id: 2, imageSource: require('../assets/event1.png'), category: 'teater', textdate: '27 Juni 2024', textdate2: 'Rp 90.000', bottomText: 'Teks 2', onButtonPress: () => {} },
+        { id: 3, imageSource: require('../assets/event1.png'), category: 'semua', textdate: '27 Juni 2024', textdate2: 'Rp 90.000', bottomText: 'Teks 2', onButtonPress: () => {} },
         // ... tambahkan data lainnya sesuai kebutuhan
       ];  
   const renderItem = ({ item }) => (
@@ -19,7 +19,7 @@ const MyFlatList = () => {
         <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 5 }}>
           <TouchableOpacity onPress={item.onButtonPress}>
             <View style={{ width: 50, height: 30, backgroundColor: '#F1F1F1', justifyContent: 'center', alignItems: 'center', borderRadius: 6 }}>
-              <Text style={{ color: '#2C2C2C' }}>{item.buttonText}</Text>
+              <Text style={{ color: '#2C2C2C' }}>{item.category}</Text>
             </View>
           </TouchableOpacity>
           <Text style={{ marginLeft: 70, fontSize: 10,}}>{item.textdate}</Text>
