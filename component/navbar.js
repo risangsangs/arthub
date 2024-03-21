@@ -28,8 +28,8 @@ const Nav = () => {
         setActiveMenu('ticketupcoming');
     };
     const GoBookmark = () => {
-        navigation.navigate('forgotpassword');
-        setActiveMenu('forgotpassword');
+        navigation.navigate('detailevent');
+        setActiveMenu('detailevent');
     };
 
     // Mengatur menu aktif berdasarkan halaman yang difokuskan
@@ -53,8 +53,8 @@ const Nav = () => {
                     <Text style={[styles.label, activeMenu === 'ticketupcoming' && styles.activeLabel]}>Ticket</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={GoBookmark} style={styles.navItem}>
-                    <Image style={[styles.icon, activeMenu === 'forgotpassword' && styles.activeIcon]} source={Bookmark} />
-                    <Text style={[styles.label, activeMenu === 'forgotpassword' && styles.activeLabel]}>Bookmark</Text>
+                    <Image style={[styles.icon, activeMenu === 'detailevent' && styles.activeIcon]} source={Bookmark} />
+                    <Text style={[styles.label, activeMenu === 'detailevent' && styles.activeLabel]}>detailevent</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={GoSetting} style={styles.navItem}>
                     <Image style={[styles.icon, activeMenu === 'profile' && styles.activeIcon]} source={Setting} />

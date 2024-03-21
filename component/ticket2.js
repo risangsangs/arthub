@@ -62,6 +62,9 @@ const Card = ({ item }) => {
         </View>
         </View>
       </View>
+      <View style={styles.dateContainer}>
+        <Text style={styles.dateText}>Mon, Jan 13</Text>
+      </View>
     </View>
   );
 };
@@ -128,7 +131,22 @@ const styles = StyleSheet.create({
     borderColor: '#D05DD',
     backgroundColor: '#FAFAFA'
   },
-  
+  dateContainer: {
+    position: 'absolute',
+    borderTopRightRadius: 10, // Set bottom-left and bottom-right radius for half-circle
+    borderBottomRightRadius: 10, // Set bottom-left and bottom-right radius for half-circle
+    bottom: 35,
+    left: 0,
+    width: 81,
+    height: 25,
+    backgroundColor: '#FED133',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  dateText: {
+    fontSize: 11,
+    color: '#ffffff',
+  }
 });
 
 export default FlatListWithCard;

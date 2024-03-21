@@ -21,6 +21,7 @@ import Halamanticketupcoming from './page/ticket_upcoming';
 import Halamanticketonsale from './page/ticket_onsale';
 import Halamanticketpast from './page/ticket_past';
 import Halamanprofile from './page/profile';
+import Halamandetailevent from './page/detailevent';
 // import HalamanRegister from './page/splash_screen';
 // import HalamanPorto from './components/portofolio_screen';
 // import HalamanHome from './components/home_screen';
@@ -50,6 +51,7 @@ export default function App() {
       <Stack.Screen name="ticketonsale" component={Halamanticketonsale} options={{ headerShown: false }}/>
       <Stack.Screen name="ticketpast" component={Halamanticketpast} options={{ headerShown: false }}/>
       <Stack.Screen name="profile" component={Halamanprofile} options={{ headerShown: false }}/>
+      <Stack.Screen name="detailevent" component={Halamandetailevent} options={{ headerShown: false }}/>
 
      </Stack.Navigator>
     </NavigationContainer>
