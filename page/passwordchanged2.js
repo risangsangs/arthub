@@ -9,40 +9,27 @@ export default function App ({ navigation }) {
   return (
   <View style={styles.container}>
            <View style={styles.atas}>
-         <Button width={41} height={41} placeholder="back" backgroundColor="#FFFFFF"  icon="arrow-left" marginTop={50} onPress={() => navigation.navigate('home')} style={styles.buttonback}/>
-         <Text style={styles.kategori}>Edit Profile</Text>
+         <Button width={41} height={41} placeholder="back" backgroundColor="#FFFFFF"  icon="arrow-left" marginTop={50} onPress={() => navigation.navigate('setting')} style={styles.buttonback}/>
+         <Text style={styles.kategori}>Change Password</Text>
         </View>
-    <View style={styles.profil}>
-        <Image style={styles.imageprofil}source={ImageProfil}/>
-      </View>
+  
       <View style={styles.buttonContainer}>
-      <Text style={styles.text2}>Username</Text>
+      <Text style={styles.text2}>New Password</Text>
           <CustomTextInput
            width={339}
            height={56}
-           placeholder="Alexander Arnold"
+           placeholder="Enter new password"
            onChangeText={(text) => setInputText(text)}
            marginTop={15}
            backgroundColor="#FFFFFF"
            textColor="black"
            style={styles.buttontextinput1}
           />
-                <Text style={styles.text2}>Email or Phone Number</Text>
+                <Text style={styles.text2}>Confirm Password</Text>
           <CustomTextInput
            width={339}
            height={56}
-           placeholder="alexander@gmail.com"
-           onChangeText={(text) => setInputText(text)}
-           marginTop={15}
-           backgroundColor="#FFFFFF"
-           textColor="black"
-           style={styles.buttontextinput1}
-          />
-                          <Text style={styles.text2}>Account Liked With</Text>
-          <CustomTextInput
-           width={339}
-           height={56}
-           placeholder="Password"
+           placeholder="Confirm your new password"
            onChangeText={(text) => setInputText(text)}
            marginTop={15}
            backgroundColor="#FFFFFF"
@@ -82,7 +69,7 @@ const styles = StyleSheet.create({
   },
   kategori: {
     top: 60,
-    left: 119,
+    left: 94,
     fontSize: 18,
   },
   header: { 
@@ -118,7 +105,7 @@ const styles = StyleSheet.create({
     borderColor: '#95989D'
   },
   buttonContainer : {
-  marginTop: 60,
+  marginTop: 30,
   marginLeft: 20
   },
   text2: {
@@ -143,7 +130,7 @@ const styles = StyleSheet.create({
   },
   buttonicon: {
     marginRight: 15,
-    marginTop: 60,
+    marginTop: 330,
     borderRadius: 50,
   }
 });

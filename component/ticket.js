@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigation, useIsFocused, useRoute } from '@react-navigation/native';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TextDecorationLine } from 'react-native'; // Menambahkan TextDecorationLine untuk mengatur garis bawah
 
 const Tic = () => {
     const navigation = useNavigation();
@@ -36,13 +36,12 @@ const Tic = () => {
         <View style={styles.container}>
             <View style={styles.nav}>
                 <TouchableOpacity onPress={GOticketupcoming} style={styles.navItem}>
-                    <Text style={[styles.label, activeMenu === 'ticketupcoming' && styles.activeLabel]}>Upcoming</Text>
+                    <Text style={[styles.label, activeMenu === 'ticketupcoming' && styles.activeLabel]}>Active</Text>
+                    {activeMenu === 'ticketupcoming' && <View style={{ borderBottomColor: 'black', borderBottomWidth: 2, width: 171 }} />}
                 </TouchableOpacity>
                 <TouchableOpacity onPress={Goticketonsale} style={styles.navItem}>
                     <Text style={[styles.label, activeMenu === 'ticketonsale' && styles.activeLabel]}>Past</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={Goticketpast} style={styles.navItem}>
-                    <Text style={[styles.label, activeMenu === 'ticketpast' && styles.activeLabel]}>On Sale</Text>
+                    {activeMenu === 'ticketonsale' && <View style={{ borderBottomColor: 'black', borderBottomWidth: 2, width: 171 }} />}
                 </TouchableOpacity>
             </View>
         </View>
@@ -56,37 +55,19 @@ const styles = StyleSheet.create({
     nav: {
         marginTop:20,
         flexDirection: 'row',
-        justifyContent: 'space-around',
+
         alignItems: 'center',
-        backgroundColor: '#EAECF0',
-        width: 331,
-        height: 34,
-        borderRadius: 15,
-        elevation: 8,
-        bottom: 10,
-        // Tambahkan properti shadow di bawah
-        shadowColor: '#000',
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
     },
     navItem: {
         alignItems: 'center',
     },
     label: {
-        fontSize: 10,
+        fontSize: 14, // Mengubah ukuran font menjadi 14
         color: 'black',
         textAlign: 'center',
     },
     activeLabel: {
-        color: 'white',
-        backgroundColor: '#786AD0',
-        width: 100,
-        height: 30,
-        borderRadius: 10,
+        color: 'black',
         textAlign: 'center', 
         textAlignVertical: 'center',
     },

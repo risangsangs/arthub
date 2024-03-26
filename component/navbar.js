@@ -19,8 +19,8 @@ const Nav = () => {
     };
 
     const GoSetting = () => {
-        navigation.navigate('profile');
-        setActiveMenu('profile');
+        navigation.navigate('setting');
+        setActiveMenu('seetting');
     };
 
     const GoTicket = () => {
@@ -57,8 +57,8 @@ const Nav = () => {
                     <Text style={[styles.label, activeMenu === 'detailevent' && styles.activeLabel]}>detailevent</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={GoSetting} style={styles.navItem}>
-                    <Image style={[styles.icon, activeMenu === 'profile' && styles.activeIcon]} source={Setting} />
-                    <Text style={[styles.label, activeMenu === 'profile' && styles.activeLabel]}>Setting</Text>
+                    <Image style={[styles.icon, activeMenu === 'setting' && styles.activeIcon]} source={Setting} />
+                    <Text style={[styles.label, activeMenu === 'setting' && styles.activeLabel]}>Setting</Text>
                 </TouchableOpacity>
             </View>
         </View>

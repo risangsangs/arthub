@@ -4,14 +4,14 @@ import { View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 const MyFlatList = () => {
     const data = [
         { id: 1, imageSource: require('../assets/event1.png'), category: 'semua', textdate: '27 Juni 2024', textdate2: 'Rp 90.000', bottomText: 'Coldplay : Music Of the Spheres 2024', onButtonPress: () => {} },
-        { id: 2, imageSource: require('../assets/event1.png'), category: 'teater', textdate: '27 Juni 2024', textdate2: 'Rp 90.000', bottomText: 'Teks 2', onButtonPress: () => {} },
-        { id: 3, imageSource: require('../assets/event1.png'), category: 'semua', textdate: '27 Juni 2024', textdate2: 'Rp 90.000', bottomText: 'Teks 2', onButtonPress: () => {} },
+        // { id: 2, imageSource: require('../assets/event1.png'), category: 'teater', textdate: '27 Juni 2024', textdate2: 'Rp 90.000', bottomText: 'Teks 2', onButtonPress: () => {} },
+        // { id: 3, imageSource: require('../assets/event1.png'), category: 'semua', textdate: '27 Juni 2024', textdate2: 'Rp 90.000', bottomText: 'Teks 2', onButtonPress: () => {} },
         // ... tambahkan data lainnya sesuai kebutuhan
       ];  
   const renderItem = ({ item }) => (
     <View style={{ flexDirection: 'row', marginBottom: 15, }}>
       {/* Gambar sebelah kiri */}
-      <Image source={item.imageSource} style={{ width: 96, height: 76, marginHorizontal: 10, marginRight: 10,borderRadius: 10 }} />
+      <Image source={item.imageSource} style={{ width: 96, height: 79, marginHorizontal: 10, marginRight: 10,borderRadius: 10 }} />
 
       {/* Konten sebelah kanan */}
       <View style={{ flex: 1, justifyContent: 'space-between' }}>

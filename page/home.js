@@ -36,7 +36,6 @@ export default function App ({ navigation }) {
         </CustomTextInput>
     <View style={styles.header2}>
         <Text style={styles.TrendingEvent}>Trending Event</Text>
-        <Text style={styles.LihatSemua}>Lihat Semua</Text>
     </View>
 
     <CustomFlatList />
@@ -47,6 +46,7 @@ export default function App ({ navigation }) {
     placeholder="Semua"
     backgroundColor="#786AD0"
     textColor="#FFFFFF"
+    onPress={() => navigation.navigate('kategori')} 
     style={[styles.buttonicon, { marginRight: 10 }]}
   />
   <Button
@@ -55,6 +55,7 @@ export default function App ({ navigation }) {
     placeholder="Teater"
     backgroundColor="#F1F1F1"
     textColor="#8F8F8F"
+    onPress={() => navigation.navigate('checkoutchanged')} 
     style={[styles.buttonicon, { marginRight: 10 }]}
   />
   <Button
@@ -63,6 +64,7 @@ export default function App ({ navigation }) {
     placeholder="Musik"
     backgroundColor="#F1F1F1"
     textColor="#8F8F8F"
+    onPress={() => navigation.navigate('detailtiket')}
     style={[styles.buttonicon, { marginRight: 10 }]}
   />
   <Button
@@ -150,7 +152,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginHorizontal: 15,
     bottom: 40,
-    marginTop: 30,
+    marginTop: 50,
     gap: 10
   },
   header3: { 

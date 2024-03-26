@@ -22,6 +22,13 @@ import Halamanticketonsale from './page/ticket_onsale';
 import Halamanticketpast from './page/ticket_past';
 import Halamanprofile from './page/profile';
 import Halamandetailevent from './page/detailevent';
+import Halamankategori from './page/kategori';
+import Halamancheckoutchanged from './page/checkoutchanged';
+import Halamancheckout from  './page/checkout';
+import Halamansetting from  './page/setting';
+import Halamanchangedpassword from  './page/passwordchanged2';
+import Halamannotification from  './page/notification';
+import Halamandetailtiket from  './page/detailtiket';
 // import HalamanRegister from './page/splash_screen';
 // import HalamanPorto from './components/portofolio_screen';
 // import HalamanHome from './components/home_screen';
@@ -52,7 +59,12 @@ export default function App() {
       <Stack.Screen name="ticketpast" component={Halamanticketpast} options={{ headerShown: false }}/>
       <Stack.Screen name="profile" component={Halamanprofile} options={{ headerShown: false }}/>
       <Stack.Screen name="detailevent" component={Halamandetailevent} options={{ headerShown: false }}/>
-
+      <Stack.Screen name="kategori" component={Halamankategori} options={{ headerShown: false }}/>
+      <Stack.Screen name="checkoutchanged" component={Halamancheckoutchanged } options={{ headerShown: false }}/>
+      <Stack.Screen name="setting" component={Halamansetting } options={{ headerShown: false }}/>
+      <Stack.Screen name="changedpassword" component={Halamanchangedpassword } options={{ headerShown: false }}/>
+      <Stack.Screen name="notification" component={Halamannotification } options={{ headerShown: false }}/>
+      <Stack.Screen name="detailtiket" component={Halamandetailtiket} options={{ headerShown: false }}/>
      </Stack.Navigator>
     </NavigationContainer>
   );
