@@ -194,6 +194,34 @@ module.exports = {
             })
         }
     },
+    buyTicket: async (req, res) => {
+        const eventId = req.params.eventId;
+
+        try{
+            const event = await Event.findById(eventId);
+
+            if(!event) {
+                return res.status(404).json({
+                    success : false,
+                    message: error.message
+                });
+            };
+
+            event.buying ++
+
+            await event.save();
+
+            return res.status(200).json({ 
+                success: true, 
+                message: 'Ticket(s) purchased successfully' 
+            });
+        }catch(error){
+            return res.status(200).json({ 
+                success: true, 
+                message: error.message 
+            });
+        }
+    },
     deleteEvent: async (req, res) => {
         const id = req.params.id
 

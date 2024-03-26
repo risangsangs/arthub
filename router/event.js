@@ -17,6 +17,8 @@ router.post('/event', [verifyToken], eventController.postEvent);
 
 router.put('/event/:id', [verifyToken], eventController.updateEvent);
 
+router.put('/event/buy/:eventId', [verifyToken], eventController.buyTicket);
+
 router.delete('/event/:id', [verifyToken], eventController.deleteEvent);
 
 module.exports = router

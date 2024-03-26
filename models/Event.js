@@ -32,6 +32,9 @@ const EventSchema = new mongoose.Schema({
     },
     view: {
         type: Number
+    },
+    buying: {
+        type: Number
     }
 },
     {
