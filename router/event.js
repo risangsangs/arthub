@@ -11,7 +11,7 @@ router.get('/event/trend', [verifyToken], eventController.getListEventTrend);
 
 router.get('/event/detail/:id', [verifyToken], eventController.getById);
 
-router.get('/event/category/:category', eventController.getCategory);
+router.get('/event/category/:category', [verifyToken], eventController.getCategory);
 
 router.post('/event', [verifyToken], eventController.postEvent);
 
