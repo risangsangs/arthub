@@ -6,7 +6,7 @@ import Search from '../assets/search.png';
 import CustomFlatList2 from '../component/flatlist2.js';
 import Booking from '../component/booking.js';
 import Icon from 'react-native-vector-icons/FontAwesome';
-
+import Navbar from '../component/navbar.js';
 export default function App({ navigation }) {
     
   const [inputText, setInputText] = useState('');
@@ -46,8 +46,8 @@ export default function App({ navigation }) {
             <Text style={styles.accountText}>Help</Text>
             <Icon name="arrow-right" style={styles.arrowIcon5} /> 
          </View>
-         <Text style={styles.logout}>Log out</Text>
         </View>
+        <Navbar />
     </View>
   );
 }

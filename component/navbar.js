@@ -6,6 +6,7 @@ import Homei from '../assets/home.png';
 import Ticket from '../assets/ticket.png';
 import Bookmark from '../assets/bookmark.png';
 import Setting from '../assets/setting.png';
+import Add from '../assets/add.png';
 
 const Nav = () => {
     const navigation = useNavigation();
@@ -28,8 +29,12 @@ const Nav = () => {
         setActiveMenu('ticketupcoming');
     };
     const GoBookmark = () => {
-        navigation.navigate('detailevent');
-        setActiveMenu('detailevent');
+        navigation.navigate('bookmark');
+        setActiveMenu('bookmark');
+    };
+    const GoAdd = () => {
+        navigation.navigate('bookmark');
+        setActiveMenu('bookmark');
     };
 
     // Mengatur menu aktif berdasarkan halaman yang difokuskan
@@ -53,8 +58,8 @@ const Nav = () => {
                     <Text style={[styles.label, activeMenu === 'ticketupcoming' && styles.activeLabel]}>Ticket</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={GoBookmark} style={styles.navItem}>
-                    <Image style={[styles.icon, activeMenu === 'detailevent' && styles.activeIcon]} source={Bookmark} />
-                    <Text style={[styles.label, activeMenu === 'detailevent' && styles.activeLabel]}>detailevent</Text>
+                    <Image style={[styles.icon, activeMenu === 'bookmark' && styles.activeIcon]} source={Bookmark} />
+                    <Text style={[styles.label, activeMenu === 'bookmark' && styles.activeLabel]}>Bookmark</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={GoSetting} style={styles.navItem}>
                     <Image style={[styles.icon, activeMenu === 'setting' && styles.activeIcon]} source={Setting} />
@@ -97,6 +102,16 @@ const styles = StyleSheet.create({
     icon: {
         width: 24,
         height: 24,
+    },
+    icon2: {
+        width: 44,
+        height: 44,
+        bottom: 15,
+    },
+    label2:{ 
+        bottom: 10,
+        fontSize: 10,
+        color: '#92959B',
     },
     activeIcon: {
         tintColor: '#7545F6',

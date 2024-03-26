@@ -20,6 +20,7 @@ const MyFlatList = () => {
     <View style={styles.container}>
       <Image source={item.imageSource} style={styles.image} resizeMode="cover" />
       <View style={styles.kotak}>
+      <View style={styles.kiri}>
       <Text style={styles.title}>{item.title}</Text>
       <View style={styles.item}>
       <Icon name="map-marker" size={20} style={styles.iconContent} />
@@ -30,9 +31,16 @@ const MyFlatList = () => {
       <Text style={styles.date}>{item.date}</Text>
       </View>
       </View>
+      </View>
       <View style={styles.text}>
       <Text style={styles.description}>{item.description}</Text>
       <Text style={styles.subdescription}>{item.subdescription}</Text>
+      <View style={styles.line}></View>
+      <Text style={styles.lokasi}>Lokasi</Text>
+      <View style={styles.maps}>
+      <Text style={styles.textmaps}>https://maps.app.goo.gl/XMdQG6nbsebwAwuHA</Text>
+      <Icon name="arrow-right" style={styles.icon} />
+      </View>
       <View style={styles.line}></View>
       <View style={styles.footer}>
        <View style={styles.leftFooter}>
@@ -105,7 +113,8 @@ const styles = StyleSheet.create({
       marginLeft: 10,
     },
     text: {
-        marginLeft: 10,
+        marginLeft: 20,
+        marginTop: 10,
     },
     description: {
       fontSize: 16,
@@ -115,9 +124,10 @@ const styles = StyleSheet.create({
     subdescription: {
         fontSize: 16,
         marginTop: 10,
+        maxWidth: 350,
     },
     line: { 
-        marginTop: 14,
+        marginTop: 20,
         width: 339,
         height: 1,
         borderWidth: 1,
@@ -151,8 +161,26 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       color: '#212121',
     },
-    
-
+    kiri: {
+      marginLeft: 10,
+    },
+    lokasi: {
+      fontWeight: 'bold',
+      fontSize: 16,
+      marginTop: 20,
+    },
+    maps: {
+      flexDirection: 'row'
+    },
+    textmaps: {
+      fontSize: 16,
+      maxWidth : 300,
+      color: '#786AD0'
+    },
+    icon: {
+      color: '#786AD0',
+      marginLeft: 100,
+    },
 });
 
 export default MyFlatList;

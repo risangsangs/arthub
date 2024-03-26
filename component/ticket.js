@@ -37,11 +37,11 @@ const Tic = () => {
             <View style={styles.nav}>
                 <TouchableOpacity onPress={GOticketupcoming} style={styles.navItem}>
                     <Text style={[styles.label, activeMenu === 'ticketupcoming' && styles.activeLabel]}>Active</Text>
-                    {activeMenu === 'ticketupcoming' && <View style={{ borderBottomColor: 'black', borderBottomWidth: 2, width: 171 }} />}
+                    {activeMenu === 'ticketupcoming' && <View style={{  borderBottomWidth: 2, width: 171 }} />}
                 </TouchableOpacity>
                 <TouchableOpacity onPress={Goticketonsale} style={styles.navItem}>
                     <Text style={[styles.label, activeMenu === 'ticketonsale' && styles.activeLabel]}>Past</Text>
-                    {activeMenu === 'ticketonsale' && <View style={{ borderBottomColor: 'black', borderBottomWidth: 2, width: 171 }} />}
+                    {activeMenu === 'ticketonsale' && <View style={{  borderBottomWidth: 2, width: 171 }} />}
                 </TouchableOpacity>
             </View>
         </View>
@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
     },
     navItem: {
         alignItems: 'center',
+        borderBottomColor: 'black', borderBottomWidth: 2, width: 171
     },
     label: {
         fontSize: 14, // Mengubah ukuran font menjadi 14
@@ -67,7 +68,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     activeLabel: {
-        color: 'black',
         textAlign: 'center', 
         textAlignVertical: 'center',
     },

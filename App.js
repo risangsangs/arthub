@@ -29,6 +29,7 @@ import Halamansetting from  './page/setting';
 import Halamanchangedpassword from  './page/passwordchanged2';
 import Halamannotification from  './page/notification';
 import Halamandetailtiket from  './page/detailtiket';
+import Halamanbookmark from  './page/bookmark';
 // import HalamanRegister from './page/splash_screen';
 // import HalamanPorto from './components/portofolio_screen';
 // import HalamanHome from './components/home_screen';
@@ -65,6 +66,8 @@ export default function App() {
       <Stack.Screen name="changedpassword" component={Halamanchangedpassword } options={{ headerShown: false }}/>
       <Stack.Screen name="notification" component={Halamannotification } options={{ headerShown: false }}/>
       <Stack.Screen name="detailtiket" component={Halamandetailtiket} options={{ headerShown: false }}/>
+      <Stack.Screen name="checkout" component={Halamancheckout} options={{ headerShown: false }}/>
+      <Stack.Screen name="bookmark" component={Halamanbookmark} options={{ headerShown: false }}/>
      </Stack.Navigator>
     </NavigationContainer>
   );

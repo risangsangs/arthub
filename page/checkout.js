@@ -5,7 +5,7 @@ import CustomTextInput from '../component/text_input.js';
 import Search from '../assets/search.png';
 import CustomFlatList2 from '../component/flatlist2.js';
 import Booking from '../component/booking.js';
-
+import Navbar from '../component/navbar.js';
 export default function App({ navigation }) {
     
   const [inputText, setInputText] = useState('');
@@ -27,6 +27,7 @@ export default function App({ navigation }) {
         <Button width={327} height={52} placeholder="Selected Promo Code" backgroundColor="#FFFFFF"  marginTop={20} onPress={() => navigation.navigate('home')} style={styles.buttonpromo}/>
         <Button width={327} height={52} placeholder="Pay Now" backgroundColor="#786AD0"  marginTop={40} onPress={() => navigation.navigate('home')} style={styles.buttonpromo2}/>
         </View>
+        <Navbar />
     </View>
   );
 }
