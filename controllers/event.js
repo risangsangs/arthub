@@ -196,24 +196,34 @@ module.exports = {
     },
     buyTicket: async (req, res) => {
         const eventId = req.params.eventId;
+        const userId = req.body.userId;
 
         try{
             const event = await Event.findById(eventId);
+            const user = await User.findById(userId);
 
             if(!event) {
                 return res.status(404).json({
                     success : false,
-                    message: error.message
-                });
+                    message: "Event not Found"
+                })
             };
+            if(!user) {
+                return res.status(404).json({
+                    success: false,
+                    message: 'User not found'
+                });
+            }
 
             event.buying ++
+            user.eventList.push(eventId)
 
             await event.save();
+            await user.save();
 
             return res.status(200).json({ 
                 success: true, 
-                message: 'Ticket(s) purchased successfully' 
+                message: 'Ticket purchased successfully' 
             });
         }catch(error){
             return res.status(200).json({ 
